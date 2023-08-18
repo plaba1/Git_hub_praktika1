@@ -22,3 +22,28 @@ class Skelbimas(Base):
     agentura1 = relationship('Agentura', back_populates='skelbimas1')
     objektas_id = Column(Integer, ForeignKey('objektas.id'))
     objektas2 = relationship('Objektas', back_populates='skelbimas2')
+
+class Vartotojas(Base):
+    __tablename__ = 'vartotojas'
+    id = Column(Integer, primary_key=True)
+    vardas = Column(String)
+    pavarde = Column(String)
+    tel_nr = Column(String)
+    username = Column(String)
+    slaptazodis = Column(String)
+    objektas1 = relationship('Objektas', back_populates='vartotojas1', cascade='all, delete, delete-orphan')
+
+
+class Objektas(Base):
+    __tablename__ = 'objektas'
+    id = Column(Integer, primary_key=True)
+    adresas = Column(String)
+    objekto_tipas = Column(String)
+    plotas = Column(Float)
+    miestas = Column(String)
+    vartotojas_id = Column(Integer, ForeignKey('vartotojas.id'))
+    vartotojas1 = relationship('Vartotojas', back_populates='objektas1')
+    skelbimas2 = relationship('Skelbimas', back_populates='objektas2', cascade='all, delete, delete-orphan')
+
+
+Base.metadata.create_all(engine)
