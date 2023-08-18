@@ -65,7 +65,7 @@ while True:
                 #
                 #       objektas_o1[skelb.objektas_id - 1].objekto_tipas,
                 #       objektas_o1[skelb.objektas_id - 1].plotas,
-                #       objektas_o1[skelb.objektas_id - 1].vartotojas_id,
+                #       objektas_o1[skelb.objektas_id - 1].vzz\artotojas_id,
                 #       objektas_o1[skelb.objektas_id - 1].miestas,
                 #       vartotojas_o1[objektas_o1[skelb.objektas_id-1].vartotojas_id-1].vardas
                 #       )

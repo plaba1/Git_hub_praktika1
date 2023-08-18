@@ -4,6 +4,8 @@ from sqlalchemy.orm import declarative_base, sessionmaker, relationship
 engine = create_engine("sqlite:///NT_skelbimai.db")
 Base = declarative_base()
 
+
+#pridetas komentas
 class Agentura(Base):
     __tablename__ = 'agentura'
     id = Column(Integer, primary_key=True)
