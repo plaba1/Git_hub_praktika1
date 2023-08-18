@@ -47,5 +47,10 @@ class Objektas(Base):
     vartotojas1 = relationship('Vartotojas', back_populates='objektas1')
     skelbimas2 = relationship('Skelbimas', back_populates='objektas2', cascade='all, delete, delete-orphan')
 
+class Info(Base):
+    __tablename__ = 'objektu informacija'
+    id = Column(Integer, primary_key=True)
+    informacija = Column(String)
+
 
 Base.metadata.create_all(engine)

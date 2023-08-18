@@ -1,6 +1,10 @@
 Session = sessionmaker(bind=engine)
 session = Session()
 
+
+#pridedam komentara ir ttr
+
+
 while True:
     pirmas_meniu = input('1. ivesti username ir slaptazodi\n2.kurti nauja vartotoja\n3. ieskoti skelbimu\nq. iseiti is programos\n')
     print('-' * 50)
